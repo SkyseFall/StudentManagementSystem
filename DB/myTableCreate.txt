@@ -1,0 +1,211 @@
+
+		DROP DATABASE SMS;
+		CREATE DATABASE SMS;
+		USE SMS;
+		SHOW TABLES;
+		
+		
+		
+
+		USER TAble : -   SELECT * FROM USERS;
+		
+CREATE TABLE USERS(_id INT PRIMARY KEY AUTO_INCREMENT,
+first_name VARCHAR(30),
+last_name VARCHAR(30),
+dob DATE,
+mobile VARCHAR(15),
+gender VARCHAR(10),
+acc_status INT,
+username VARCHAR(30),
+email VARCHAR(30),
+password VARCHAR(100),
+type_job VARCHAR(10),
+pincode VARCHAR(10),
+locality varchar(30)
+);
+
+ALTER TABLE users ADD CONSTRAINT unique_email UNIQUE(email);
+
+
+
+
+	ADDRESS Table :-
+	
+CREATE TABLE ADDRESS(
+locality VARCHAR(100),
+city VARCHAR(25),
+district VARCHAR(25),
+state VARCHAR(25),
+country VARCHAR(25),
+pincode VARCHAR(10) PRIMARY KEY
+);
+
+
+
+
+	TEACHER Table :-    SELECT * FROM TEACHER;
+
+CREATE TABLE TEACHER(
+teacher_id INT PRIMARY KEY AUTO_INCREMENT,
+designation VARCHAR(25)
+);
+
+ALTER TABLE teacher ADD salary INT DEFAULT 0;
+
+
+
+
+
+	STUDENT_DETAILS table :- select * from student_details;
+		
+drop table STUDENT_DETAILS;
+
+CREATE TABLE STUDENT_DETAILS(
+student_id INT,
+roll_no INT  PRIMARY KEY AUTO_INCREMENT,
+class VARCHAR(2),
+section VARCHAR(2),
+CONSTRAINT s_d UNIQUE (roll_no,class)
+);
+
+ALTER TABLE student_details ADD fees INT DEFAULT 0;
+
+	
+	
+	
+	
+	TEACHER_ASSIGNMENT table :-
+	
+CREATE TABLE teacher_assignment(
+teacher_id INT,
+assignment_id INT PRIMARY KEY AUTO_INCREMENT,
+added_assignment VARCHAR(100),
+assignment_due TIMESTAMP,
+submission_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+	
+ALTER TABLE teacher_assignment ADD subject_code VARCHAR(10);
+
+	
+	
+	TEACHER_ATTENDANCE TAble :-
+	
+CREATE TABLE teacher_attendance(
+teacher_id INT,
+date_of_attendance TIMESTAMP PRIMARY KEY DEFAULT CURRENT_TIMESTAMP,
+attendance_status VARCHAR(10)
+);
+
+
+
+
+	STUDENT_ATTENDANCE table :-
+
+
+CREATE TABLE student_attendance(
+student_id INT,
+date_of_attendance TIMESTAMP PRIMARY KEY DEFAULT CURRENT_TIMESTAMP,
+attendance_status VARCHAR(10)
+);
+
+
+
+
+
+	SCHEDULE Table :-
+
+CREATE TABLE schedule(
+session_id INT PRIMARY KEY AUTO_INCREMENT,
+teacher_id INT,
+class VARCHAR(2),
+subject_code VARCHAR(10),
+start_time TIME,
+end_time TIME
+);
+
+
+
+
+
+
+    SUBJECTS table :-
+
+drop table subjects;
+
+CREATE TABLE SUBJECTS(
+subject_name VARCHAR(25),
+class VARCHAR(2),
+subject_code VARCHAR(10) PRIMARY KEY,
+max_marks INT,
+max_assignment_marks INT,
+teacher_id INT
+);
+
+
+	STUDENT_SUBJECTS table :-
+	
+ // This class Should be Craete by hibertanate....
+ 
+drop table STUDENT_SUBJECTS;
+
+CREATE TABLE STUDENT_SUBJECTS(
+student_id INT primary key,
+subject_code VARCHAR(10)
+);
+
+ALTER TABLE STUDENT_SUBJECTS
+ADD CONSTRAINT FK_subject_code
+FOREIGN KEY (subject_code) REFERENCES SUBJECTS(subject_code);
+
+
+
+
+	MARKS table :-
+	
+CREATE TABLE MARKS(
+marksheet_id INT PRIMARY KEY AUTO_INCREMENT,
+student_id INT,
+subject_code VARCHAR(10),
+marks INT,
+assignment_marks INT,
+assignment_solution VARCHAR(100),
+submission_time TIMESTAMP
+);
+
+
+
+
+	STUDENT_FEEDBACK table :-
+
+CREATE TABLE student_feedback(
+feedback_id INT PRIMARY KEY AUTO_INCREMENT,
+student_id INT,
+teacher_id INT,
+feedback_remarks VARCHAR(100),
+feedback_ratings INT
+);
+
+
+
+
+	CLASS_DISTRIBUTION table :-
+
+CREATE TABLE class_distribution(
+teacher_id INT,
+class VARCHAR(2)
+);
+
+
+
+
+
+
+	CLASS table  :
+
+CREATE TABLE CLASS (
+class VARCHAR(2) PRIMARY KEY,
+class_rep INT,
+teacher_rep INT
+);
+
+

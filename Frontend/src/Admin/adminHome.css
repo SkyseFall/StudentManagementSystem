@@ -1,0 +1,142 @@
+.adminHome{
+    color: rgb(243, 240, 240) !important;
+}
+.navbutton{
+    position: relative;
+    padding-top: 7px;
+    padding-left: 7px;
+    background: none;
+border: none;
+
+}
+.container{
+  min-height: 1000px;
+}
+.adminProfile{
+    padding-top: 25px;
+    padding-left: 150px;
+}
+.button {
+    position: relative;
+    top: 20px;
+    left: 100px;
+    height: 45px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  }
+  
+  .container td {
+      padding-top: 10px;
+      padding-left: 10px;
+  }
+.add{
+    padding-left: 150px;
+}
+.b-spacing{
+    padding-right: 50px;
+   float: left;
+}
+
+.button-small {
+    position: relative;
+    left: 30px;
+    height: 35px;
+    min-width: 100px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    
+    background: linear-gradient(135deg, #57ce7e, #729424);
+  }
+  .button-delete{
+    position: relative;
+    left: 30px;
+    height: 35px;
+    min-width: 100px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    
+    background: linear-gradient(135deg, #db5353, #9b0d0d);
+  }
+  .button-edit{
+    position: relative;
+    left: 30px;
+    height: 35px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    
+    background: linear-gradient(135deg, #358cdf, #033072);
+  }
+  .tableHead{
+background-color:cornsilk;
+  }
+
+  .button-assign {
+    position: relative;
+    left: 30px;
+    height: 35px;
+   
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    
+    background: linear-gradient(135deg, #e769b7, #810c50);
+  }
+
+  .button-show {
+    position: relative;
+    left: 30px;
+    height: 35px;
+   
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  }
+  .button-add{
+    position: relative;
+   
+    height: 35px;
+   min-width: 60px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    
+    background: linear-gradient(135deg, #57ce7e, #729424);
+  }

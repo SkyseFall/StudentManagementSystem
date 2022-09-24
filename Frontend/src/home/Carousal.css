@@ -1,0 +1,38 @@
+.carousel-item{
+    height: 25rem;
+    background-color: #000;
+    
+}
+.logosize{
+    height: 50px;
+}
+.name{
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+.cardbar{
+    
+    height: 190px;
+    width: 450px;
+    background-color: rgba(59, 120, 190, 0.8);
+    ;
+}
+
+.innercard{
+   
+    position: relative;
+    font-weight: bold;
+    
+    top: 40px;
+    left: 220px;
+    height: 130px;
+    width: 170px;
+    color:white;
+    
+    
+}
+.shadow{ 
+    box-shadow: 10px 10px 5px grey;
+}

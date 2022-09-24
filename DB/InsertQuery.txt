@@ -1,0 +1,196 @@
+
+
+		INSERT Query FOR USERS :-
+		
+				ADMIN 
+				
+				
+INSERT INTO users VALUES(default,"Akash","Yadav","1994-12-25","09198532073","MALE",1,"akash16141","akash16141@gmail.com",
+	"admin","admin","411057", "Jhansi");
+	
+INSERT INTO users VALUES(default,"Shivanshu","Singh","1997-08-15","09936521100","MALE",1,"shiv1","shiv1@gmail.com",
+	"admin","admin","411057", "Jhansi");
+	
+INSERT INTO users VALUES(default,"Sonam","Yadav","1995-11-01","07007859780","Female",1,"sonam123","sonam123@gmail.com",
+"admin","admin","411057","pune");
+
+
+
+				STUDENTS
+				
+INSERT INTO users VALUES(default,"Pradeep","Yadav","2002-06-16","08600165318","MALE",1,"pra123","pra123@gmail.com",
+"student","student","411057", "Jhansi");
+
+INSERT INTO users VALUES(default,"Shrikrushna","Kaphare","2001-07-26","08009180125","MALE",0,"sk123","shri@gmail.com",
+"student","student","411057", "pune");
+
+INSERT INTO users VALUES(default,"Deependra","Chauhan","2003-12-16","07007859782","MALE",0,"Deep123","Deep123@gmail.com",
+"student","student","411057", "pune");
+
+INSERT INTO users VALUES(default,"Brijendra","Yadav","2003-09-06","07007859234","MALE",default,"brij123","brij123@gmail.com",
+"student","student","411057", "pune");
+
+INSERT INTO users VALUES(default,"Hardik","Pandya","2002-03-01","07007859624","MALE",0,"har123","har123@gmail.com",
+"student","student","411057", "pune");
+
+INSERT INTO users VALUES(default,"Virat","Singh","2000-12-25","07007859430","MALE",0,"virat123","virat123@gmail.com",
+"student","student","411057", "pune");
+
+INSERT INTO users VALUES(default,"Deepa","Singh","2001-01-05","07007850439","Female",1,"dep123","dep123@gmail.com",
+"student","student","411057", "pune");
+
+INSERT INTO users VALUES(default,"Shilpi","Yadav","2002-01-16","08600161111","Female",1,"shil123","shil123@gmail.com",
+"student","student","411057", "pune");
+
+INSERT INTO users VALUES(default,"Shreya","Chuahan","2001-04-02","09110165318","Female",0,"sh123","sh123@gmail.com",
+"student","student","411057", "pune");
+
+
+				TEACHERS
+				
+				
+INSERT INTO users VALUES(default,"Sonita","singh","1992-04-11","07000165318","Female",1,"sonita123","sonita123@gmail.com",
+"teacher","teacher","411057", "pune");
+
+INSERT INTO users VALUES(default,"Manjari","Yadav","1993-06-12","07000148318","Female",1,"man123","man123@gmail.com",
+"teacher","teacher","411057", "Jhansi");
+
+INSERT INTO users VALUES(default,"Shifali","James","1992-07-13","07009180125","Female",1,"shifa123","shifa123@gmail.com",
+"teacher","teacher","411057", "bhopal");
+
+INSERT INTO users VALUES(default,"Naina","Bhushan","1991-12-14","07007859782","Female",1,"naina123","naina123@gmail.com",
+"teacher","teacher","411057", "babina");
+
+INSERT INTO users VALUES(default,"Praveen","Verma","1994-09-15","07007859234","MALE",1,"prav123","prav123@gmail.com",
+"teacher","teacher","411057", "delhi");
+
+INSERT INTO users VALUES(default,"Abhishek","Jain","1990-03-16","07007859624","MALE",1,"abhi123","abhi123@gmail.com",
+"teacher","teacher","411057", "indore");
+
+
+------------------------------------------------------------
+
+			INSERT Query into CLASS_DISTRIBUTION
+			
+insert into class_distribution values(13, "05");
+insert into class_distribution values(13, "04");
+
+insert into class_distribution values(14, "07");
+
+insert into class_distribution values(15, "07");
+insert into class_distribution values(15, "08");
+insert into class_distribution values(15, "06");
+
+insert into class_distribution values(18, "11");
+insert into class_distribution values(18, "12");
+
+
+-------------------------------------------------------------
+
+			INSERT Query into SUBJECTS 
+			
+  //  subject_name | class | subject_code | max_marks | max_assignment_marks | teacher_id
+			
+insert into subjects values("English", "05","eng_05", 100, 20, 13 );
+
+insert into subjects values("English", "04", "eng_04", 100, 20, 13 );
+
+insert into subjects values("Physics", "11", "phy_11", 100, 20, 18 );
+
+insert into subjects values("Physics", "12", "phy_12", 100, 20, 18 );
+
+insert into subjects values("Biology", "07", "bio_07", 100, 20, 15 );
+
+insert into subjects values("Biology", "08", "bio_08", 100, 20, 15 );
+
+insert into subjects values("Biology", "06", "bio_06", 100, 20, 15 );
+
+
+
+-------------------------------------------------------------
+
+			INSERT Query into STUDENT_SUBJECTS 
+	
+insert into student_subjects values(4,"bio_06");
+insert into student_subjects values(5,"phy_11");
+insert into student_subjects values(10,"phy_11");
+insert into student_subjects values(9,"phy_12");
+insert into student_subjects values(8,"bio_06");
+
+
+
+
+-------------------------------------------------------------
+
+			INSERT Query into TEACHER
+			
+insert into teacher values(18,"SENIOR", 30000);
+insert into teacher values(17,"JUNIOR", default);
+insert into teacher values(13,"SENIOR", default);
+insert into teacher values(14,"SENIOR", 30000);
+insert into teacher values(15,"JUNIOR", default);
+insert into teacher values(16,"SENIOR", 30000);
+
+
+
+-------------------------------------------------------------
+
+			INSERT Query into STUDENT_DETAILS;
+			
+insert into student_details values(4,default,"06","A", 5000);
+
+insert into student_details values(8,default,"06","B", 5000);
+
+insert into student_details values(5,default,"11","A", 8000);
+
+insert into student_details values(10,default,"11","A", 8000);
+
+insert into student_details values(9,default,"12","A", 8000);
+
+
+
+-------------------------------------------------------------
+
+			INSERT Query into SCHEDULE;
+			
+			
+insert into SCHEDULE values(default, "15", "06", "bio_06",
+    "09:30", "10:15");
+
+insert into SCHEDULE values(default, "15", "07", "bio_07",
+    "11:00", "11:45");
+	
+insert into SCHEDULE values(default, "15", "08", "bio_08",
+    "11:45", "12:30");
+	
+insert into SCHEDULE values(default, "13", "04", "eng_04",
+    "09:30", "10:15");
+	
+insert into SCHEDULE values(default, "13", "05", "eng_05",
+    "11:45", "12:30");
+	
+insert into SCHEDULE values(default, "18", "11", "phy_11",
+    "11:45", "12:30");
+	
+insert into SCHEDULE values(default, "18", "12", "phy_12",
+   "09:30", "10:15" );
+			
+	
+	
+-----------------------------------------------------------
+
+			INSERT Query into Class;
+			
+	insert into class values("1",50,4);
+	insert into class values("2",50,4);
+	insert into class values("3",55,4);
+	insert into class values("4",55,5);
+	insert into class values("5",52,5);
+	insert into class values("6",50,5);
+	insert into class values("7",55,5);
+	insert into class values("8",55,5);
+	insert into class values("9",60,6);
+	insert into class values("10",60,6);
+	insert into class values("11",40,4);
+	insert into class values("12",35,4);
+	

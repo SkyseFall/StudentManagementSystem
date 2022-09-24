@@ -6,6 +6,4 @@ import com.iacsd.pojos.Address;
 
 public interface AddressDao extends JpaRepository<Address, String> {
 	
-	Address save();
-	
 }

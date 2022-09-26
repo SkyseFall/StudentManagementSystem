@@ -98,7 +98,10 @@ public class StudentDetailsServiceImpl implements StudentDetailsService {
 
 	@Override
 	public StudentDetails findBystudentId(int userId) {
-		return studentDetailsDao.findBystudentId(userId);
+		System.out.println("userid : "+userId);
+		 StudentDetails findBystudentId = studentDetailsDao.findBystudentId(userId);
+		 System.out.println("findBystudentId : "+findBystudentId);
+		return findBystudentId;
 	}
 
 	@Override

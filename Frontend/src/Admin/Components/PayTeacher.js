@@ -17,6 +17,7 @@ const PayTeacher = () =>{
             const result = Response.data
             if(result.status == "success"){
                 histroy.push("/Payment")
+                
             }else{
                 window.alert(result.error)
             }

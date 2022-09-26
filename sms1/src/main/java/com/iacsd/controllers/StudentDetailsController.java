@@ -73,17 +73,22 @@ public class StudentDetailsController {
 	
 	@PostMapping("/addClass")
 	public ResponseEntity<?> addClass(@RequestBody StudentDetailsWithName student){
+//		public ResponseEntity<?> addClass(@RequestBody StudentDetails student){
 		String standard = student.getStd();
+		System.out.println("std : "+standard);
 		StudentDetails studentD = studentDetailsService.findBystudentId(student.getStudentId());
+		System.out.println("studentD : "+studentD);
 		List<Subjects> subList = subService.findByStd(standard);
 		if(studentD != null) {
 			studentD.removeAll();
-		}else {
+		}
+		else {
 			studentD = new StudentDetails();
+//			studentDetailsService.save(student);
 		}
-		for (Subjects s : subList) {
-			studentD.addSubject(s);
-		}
+//		for (Subjects s : subList) {
+//			studentD.addSubject(s);
+//		}
 		studentD.setStudentId(student.getStudentId());
 		studentD.setStd(standard);
 		studentD.setSection(student.getSection());

@@ -1,9 +1,10 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { useLocation } from "react-router"
+import { useLocation, useHistory } from "react-router"
 
 const EditStudentClass = () =>{
     const location = useLocation()
+    const histroy = useHistory()
     const student = location.state
 
     const url = "http://localhost:8080"
@@ -34,6 +35,7 @@ const EditStudentClass = () =>{
             const result = Response.data
             if(result.status == "success"){
                 window.alert("Class "+std+" assigned successfully to student "+student.studentName)
+                histroy.push("/AssignClassToStudents")
             }
         })
     }

@@ -38,7 +38,7 @@ public class ScheduleController {
 	
 	@PostMapping("/addSchedule")
 	public ResponseEntity<?> addSchedule(@RequestBody ScheduleModel scheduleM){
-		System.out.println(scheduleM.toString());
+		System.out.println("scheduleM : "+scheduleM.toString());
 		Map<String, Object> map = Maps.getMap();
 		Schedule schedule = scheduleService.extractSchedule(scheduleM);
 		System.out.println(schedule.toString());

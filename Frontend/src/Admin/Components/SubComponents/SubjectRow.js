@@ -39,9 +39,10 @@ const SubjectRow = ({ s }) => {
             <td>{s.maxAssignmentMarks}</td>
             <td>{s.teacherName}</td>
 
-            <td>
+            {/* <td>
                 <button className="button-edit" onClick={EditSubject} >Edit</button>
-            </td>
+            </td> */}
+            
         </tr>
     )
 }
